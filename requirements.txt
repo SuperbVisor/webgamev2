@@ -3,3 +3,4 @@ Flask-Session==0.3.2
 authlib==0.15.5
 pygame==2.0.1
 pytz==2021.1
+Flask_SQLAlchemy
