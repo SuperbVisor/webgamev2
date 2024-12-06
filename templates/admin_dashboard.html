@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Admin Dashboard</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/admin_dashboard">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/logout">Logout</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/view_reports">View Reports 
+                        {% if new_messages_count > 0 %}
+                            <span class="badge badge-danger">{{ new_messages_count }}</span>
+                        {% endif %}
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h2>Welcome, Admin {{ session['username'] }}!</h2>
+        {% if new_messages_count > 0 %}
+            <div class="alert alert-info" role="alert">
+                You have {{ new_messages_count }} new message(s) from users!
+            </div>
+        {% endif %}
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">User Management</h5>
+                        <p class="card-text">Manage user accounts and Banning Users.</p>
+                        <a href="/manage_users" class="btn btn-primary">Manage Users</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Reports</h5>
+                        <p class="card-text">View and generate reports on user activity.</p>
+                        <a href="/view_reports" class="btn btn-primary">View Reports</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Settings</h5>
+                        <p class="card-text">Adjust system settings and configurations.</p>
+                        <a href="#" class="btn btn-primary">System Settings</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

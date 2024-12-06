@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilih Game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .game-card {
+            margin: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+        .game-card:hover {
+            transform: scale(1.05);
+        }
+        .game-image {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Game-Station</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/user_dashboard">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/logout">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h2 class="text-center">Pilih Game</h2>
+        <div class="row">
+            <!-- Game 1 -->
+            <div class="col-md-4">
+                <div class="game-card">
+                    <img src="static/imgs/game1_image.png" alt="Game 1" class="game-image">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Bochi Jump</h5>
+                        <p class="card-text">Bochi Jummpy sebuah permainan platformer 2D yang seru dan menantang, Jangan Sampai Jatuhh!!.</p>
+                        <a href="/play_game1" class="btn btn-primary">Play Now</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Game 2 -->
+            <div class="col-md-4">
+                <div class="game-card">
+                    <img src="static/imgs/game2_image.jpg" alt="Game 2" class="game-image">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">DOOM Python</h5>
+                        <p class="card-text">Game Shooter FPS yang menggunakan bahasa Python.</p>
+                        <a href="/play_game2" class="btn btn-primary">Play Now</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Game 3 -->
+            <div class="col-md-4">
+                <div class="game-card">
+                    <img src="static/imgs/game3_image.png" alt="Game 3" class="game-image">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Aeroblaster</h5>
+                        <p class="card-text">Sebuah Game shooter 2d platformer yang menggunakan bahasa Python, dan hindari peluru musuh capai objektif utama.</p>
+                        <a href="/play_game3" class="btn btn-primary">Play Now</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Game 4 -->
+            <div class="col-md-4">
+                <div class="game-card">
+                    <img src="static/imgs/game4_image.png" alt="Game 4" class="game-image">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Pixel Adventure</h5>
+                        <p class="card-text">Ambil buah dan hindarin Traps agar bisa melanjutkan level.</p>
+                        <a href="/play_game4" class="btn btn-primary">Play Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
