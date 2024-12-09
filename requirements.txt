@@ -1,5 +1,5 @@
 Flask
 Flask==3.0.3
-pygame==2.0.1
+pygame==2.5.0
 authlib==0.15.3
 pytz==2021.1
