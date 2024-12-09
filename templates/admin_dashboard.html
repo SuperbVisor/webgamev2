@@ -6,6 +6,13 @@
     <title>Admin Dashboard</title>
     <link rel="icon" href="{{ url_for('static', filename='imgs/icon_web.png') }}" type="image/png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+    body {
+            background-image: url("{{ url_for('static', filename='imgs/admin_bg.png') }}");
+            background-size: cover; /* Mengatur agar gambar menutupi seluruh halaman */
+            background-repeat: no-repeat; /* Menghindari pengulangan gambar */
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">

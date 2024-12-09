@@ -176,57 +176,19 @@ def pilih_game():
 
 @app.route('/play_game1')
 def play_game1():
-    try:
-        # Path lengkap ke file jumpy_game.py
-        game_path = os.path.join(os.getcwd(), 'Game1/jumpy_game.py')
-        
-        # Menjalankan game sebagai proses terpisah
-        subprocess.Popen(['python', game_path])
-        
-        flash('Game sedang berjalan. Silakan mainkan!', 'success')
-        return redirect(url_for('pilih_game'))
-    except Exception as e:
-        flash(f'Gagal menjalankan game: {e}', 'danger')
-        return redirect(url_for('pilih_game'))
+    return render_template('Game1/index.html')
 
 @app.route('/play_game2')
 def play_game2():
-    try:
-        game_path = os.path.join(os.getcwd(), 'Game2/main.py')
-        
-        subprocess.Popen(['python', game_path])
-        
-        flash('Game sedang berjalan. Silakan mainkan!', 'success')
-        return redirect(url_for('pilih_game'))
-    except Exception as e:
-        flash(f'Gagal menjalankan game: {e}', 'danger')
-        return redirect(url_for('pilih_game'))
+    return render_template('Game2/index.html')
 
 @app.route('/play_game3')
 def play_game3():
-    try:
-        game_path = os.path.join(os.getcwd(), 'Game3/car_game.py')
-        
-        subprocess.Popen(['python', game_path])
-        
-        flash('Game sedang berjalan. Silakan mainkan!', 'success')
-        return redirect(url_for('pilih_game'))
-    except Exception as e:
-        flash(f'Gagal menjalankan game: {e}', 'danger')
-        return redirect(url_for('pilih_game'))
+    return render_template('Game3/index.html')
 
 @app.route('/play_game4')
 def play_game4():
-    try:
-        game_path = os.path.join(os.getcwd(), 'Game4/PixelAdventure.py')
-        
-        subprocess.Popen(['python', game_path])
-        
-        flash('Game sedang berjalan. Silakan mainkan!', 'success')
-        return redirect(url_for('pilih_game'))
-    except Exception as e:
-        flash(f'Gagal menjalankan game: {e}', 'danger')
-        return redirect(url_for('pilih_game'))
+    return render_template('Game4/index.html')
 
 # Halaman logout
 @app.route('/logout')

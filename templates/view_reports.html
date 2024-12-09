@@ -6,6 +6,19 @@
     <title>Reports</title>
     <link rel="icon" href="{{ url_for('static', filename='imgs/icon_web.png') }}" type="image/png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='imgs/report_bg.jpg') }}");
+            background-size: cover; /* Mengatur agar gambar menutupi seluruh halaman */
+            background-repeat: no-repeat; /* Menghindari pengulangan gambar */
+        }
+        .blur-box {
+            backdrop-filter: blur(10px); /* Menambahkan efek blur */
+            padding: 20px; /* Menambahkan padding untuk estetika */
+            border-radius: 8px; /* Menambahkan border radius */
+            background-color: rgba(255, 255, 255, 0.5); /* Warna latar belakang semi-transparan */
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -23,6 +36,7 @@
     </nav>
 
     <div class="container mt-4">
+        <div class="blur-box">
         <h2>Messages From Users</h2>
         <table class="table table-striped">
             <thead>
@@ -44,6 +58,7 @@
                 {% endfor %}
             </tbody>
         </table>
+    </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

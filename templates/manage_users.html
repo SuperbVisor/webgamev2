@@ -6,6 +6,20 @@
     <title>Manage Users</title>
     <link rel="icon" href="{{ url_for('static', filename='imgs/icon_web.png') }}" type="image/png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='imgs/manage_bg.png') }}");
+            background-size: cover; /* Mengatur agar gambar menutupi seluruh halaman */
+            background-repeat: no-repeat; /* Menghindari pengulangan gambar */
+        }
+
+        .blur-box {
+            backdrop-filter: blur(10px); /* Menambahkan efek blur */
+            padding: 20px; /* Menambahkan padding untuk estetika */
+            border-radius: 8px; /* Menambahkan border radius */
+            background-color: rgba(255, 255, 255, 0.5); /* Warna latar belakang semi-transparan */
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -23,33 +37,34 @@
     </nav>
 
     <div class="container mt-4">
-        <h2>Manage Users</h2>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Username</th>
-                    <th>Email</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for user in users %}
-                <tr>
-                    <td>{{ user.id }}</td>
-                    <td>{{ user.username }}</td>
-                    <td>{{ user.email }}</td>
-                    <td>
-                        <a href="#" class="btn btn-primary">Edit</a>
-                        <form action="{{ url_for('delete_user', user_id=user.id) }}" method="POST" style="display:inline;">
-                            <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this user?');">Ban</button>
-                        </form>
-                    </td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
+        <div class="blur-box"> <!-- Tambahkan kelas blur-box di sini -->
+            <h2>Manage Users</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for user in users %}
+                    <tr>
+                        <td>{{ user.id }}</td>
+                        <td>{{ user.username }}</td>
+                        <td>{{ user.email }}</td>
+                        <td>
+                            <a href="#" class="btn btn-primary">Edit</a>
+                            <form action="{{ url_for('delete_user', user_id=user.id) }}" method="POST" style="display:inline;">
+                                <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this user?');">Ban</button>
+                            </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>

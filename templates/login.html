@@ -8,15 +8,21 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
-            background-color: #f8f9fa;
+            background-image: url("{{ url_for('static', filename='imgs/lr_bg.jpg') }}");
+            background-size: cover; /* Mengatur agar gambar menutupi seluruh halaman */
+            background-repeat: no-repeat; /* Menghindari pengulangan gambar */
         }
         .form-container {
             max-width: 400px;
             margin: 100px auto;
             padding: 20px;
-            background-color: white;
+            backdrop-filter: blur(10px); /* Adds blur effect */
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2, label, p {
+        color: white; /* Mengubah warna teks menjadi putih */
         }
     </style>
 </head>
