@@ -205,7 +205,7 @@ def play_game2():
 @app.route('/play_game3')
 def play_game3():
     try:
-        game_path = os.path.join(os.getcwd(), 'Game3/Aeroblaster.py')
+        game_path = os.path.join(os.getcwd(), 'Game3/car_game.py')
         
         subprocess.Popen(['python', game_path])
         
