@@ -2,7 +2,7 @@
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 # More info on Python, GitHub Actions, and Azure App Service: https://aka.ms/python-webapps-actions
 
-name: Build and deploy Python app to Azure Web App - gamesstations
+name: Build and deploy Python app to Azure Web App - GamesStations
 
 on:
   push:
@@ -65,14 +65,14 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_3EFF2F82DDC548ECA90FFA75AD18CB1C }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_F9DAE30C4882415EA98C096BA626FDCE }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_1933E093DBBA459FB6255035550230A6 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_CD07B8F10C304D4F850FE557BADDA21D }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_59B8B9727A7F428BB6B2B763CD5699FA }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_F06FA7CACA294FF4AF23DD2E01245E2A }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
         with:
-          app-name: 'gamesstations'
+          app-name: 'GamesStations'
           slot-name: 'Production'
           
