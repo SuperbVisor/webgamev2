@@ -22,10 +22,12 @@ google = oauth.register(
 )
 
 # Konfigurasi MySQL
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = ''  # Ganti dengan password MySQL Anda
-app.config['MYSQL_DB'] = 'db_webfp'
+app.config['MYSQL_HOST'] = 'gamestationspro.mysql.database.azure.com'
+app.config['MYSQL_USER'] = 'Egarathwal'  # Your MySQL username
+app.config['MYSQL_PASSWORD'] = ''  # Your MySQL password
+app.config['MYSQL_DB'] = 'db_webfp'  # Your MySQL database name
+app.config['MYSQL_PORT'] = 3306  # Default MySQL port
+
 
 mysql = MySQL(app)
 
