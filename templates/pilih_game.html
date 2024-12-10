@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pilih Game</title>
     <link rel="icon" href="{{ url_for('static', filename='imgs/icon_web.png') }}" type="image/png">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
     <style>
         body {
             background-color: #f8f9fa;
@@ -54,7 +54,7 @@
                     <div class="card-body text-center">
                         <h5 class="card-title">Triangle Escape</h5>
                         <p class="card-text">Bantu Triangle untuk pulang kerumah, keseruan dari sebuah game platformer dan hindari trap yang ada!.</p>
-                        <a href="/play_game1" class="btn btn-primary">Play Now</a>
+                        <a href="/play_game1" class="btn btn-primary mb-3">Play Now</a>
                     </div>
                 </div>
             </div>
@@ -65,7 +65,7 @@
                     <div class="card-body text-center">
                         <h5 class="card-title">Evil Glitch</h5>
                         <p class="card-text">Cari glitch yang ada di map dan perbaiki untuk lanjutkan game hindari musuh dan traps!!.</p>
-                        <a href="/play_game2" class="btn btn-primary">Play Now</a>
+                        <a href="/play_game2" class="btn btn-primary mb-3">Play Now</a>
                     </div>
                 </div>
             </div>
@@ -76,7 +76,7 @@
                     <div class="card-body text-center">
                         <h5 class="card-title">Escape Backroom</h5>
                         <p class="card-text">Sebuah Game First person dengan mencari jalan keluar untuk selamatkan diri.</p>
-                        <a href="/play_game3" class="btn btn-primary">Play Now</a>
+                        <a href="/play_game3" class="btn btn-primary mb-3">Play Now</a>
                     </div>
                 </div>
             </div>
@@ -87,15 +87,13 @@
                     <div class="card-body text-center">
                         <h5 class="card-title">The Wandering Wraith</h5>
                         <p class="card-text">Pemain berperan sebagai "Wraith," roh pengembara yang harus memecahkan teka-teki, mengungkap misteri masa lalunya.</p>
-                        <a href="/play_game4" class="btn btn-primary">Play Now</a>
+                        <a href="/play_game4" class="btn btn-primary mb-3">Play Now</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
 </body>
 </html>

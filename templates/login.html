@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="icon" href="{{ url_for('static', filename='imgs/icon_web.png') }}" type="image/png">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
     <style>
         body {
             background-image: url("{{ url_for('static', filename='imgs/lr_bg.jpg') }}");
@@ -23,6 +23,10 @@
 
         h2, label, p {
         color: white; /* Mengubah warna teks menjadi putih */
+        }
+        .btn {
+            width: 100%; /* Membuat tombol mengambil lebar penuh */
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -56,8 +60,6 @@
           {% endif %}
         {% endwith %}
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
 </body>
 </html>
