@@ -66,4 +66,4 @@ jobs:
         with:
           app-name: 'GamesTerminalPro'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_61678C0EA3324C3082864301B90F2C17 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A3EC432BD3E64E3FBD319A9DC7E91819 }}
