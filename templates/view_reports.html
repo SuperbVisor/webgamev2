@@ -50,10 +50,10 @@
             <tbody>
                 {% for message in messages %}
                 <tr>
-                    <td>{{ message['id'] }}</td>
-                    <td>{{ message['sender'] }}</td>
-                    <td>{{ message['message'] }}</td>
-                    <td>{{ message['timestamp'] }}</td>
+                    <td>{{ message[1] }}</td>  <!-- Sender -->
+                    <td>{{ message[2] }}</td>  <!-- Message -->
+                    <td>{{ message[3] }}</td>  <!-- Timestamp -->
+                    <td>{{ message[4] }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
