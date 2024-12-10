@@ -66,4 +66,4 @@ jobs:
         with:
           app-name: 'StationsGamePro'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_4264FD6EAA474BA78D9FE483A30F50CD }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_6ABF3A5D0422445DB7F0B2BEDF47F71E }}
