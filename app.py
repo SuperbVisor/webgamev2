@@ -21,12 +21,11 @@ google = oauth.register(
     client_kwargs={'scope': 'openid email profile'}
 )
 
-# Konfigurasi MySQL dengan kredensial Azure
-app.config['MYSQL_HOST'] = 'gamestationspro.mysql.database.azure.com'
-app.config['MYSQL_USER'] = 'Egarathwal@gamestationspro'
-app.config['MYSQL_PASSWORD'] = 'Admin123'  # Ganti dengan password Azure MySQL
-app.config['MYSQL_DB'] = 'db_webfp'        # Ganti dengan nama database Anda
-app.config['MYSQL_PORT'] = 3306
+# Konfigurasi MySQL
+app.config['MYSQL_HOST'] = 'localhost'
+app.config['MYSQL_USER'] = 'root'
+app.config['MYSQL_PASSWORD'] = ''  # Ganti dengan password MySQL Anda
+app.config['MYSQL_DB'] = 'db_webfp'
 
 mysql = MySQL(app)
 

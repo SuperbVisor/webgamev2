@@ -7,11 +7,37 @@
     <link rel="icon" href="{{ url_for('static', filename='imgs/icon_web.png') }}" type="image/png">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
     <style>
-        body {
-            background-image: url("{{ url_for('static', filename='imgs/bg.jpg') }}");
-            background-size: cover; /* Mengatur agar gambar menutupi seluruh halaman */
-            background-repeat: no-repeat; /* Menghindari pengulangan gambar */
-        }
+        html, body {
+    height: 100%; /* Pastikan background mencakup seluruh halaman */
+    margin: 0; /* Hilangkan margin default */
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    background-image: url("{{ url_for('static', filename='imgs/bg.jpg') }}");
+    background-size: cover; /* Membuat gambar menutupi seluruh layar */
+    background-repeat: no-repeat; /* Menghindari pengulangan gambar */
+    background-attachment: fixed; /* Membuat background tetap di tempat saat halaman digulir */
+    background-position: center; /* Menempatkan background di tengah */
+}
+
+.container {
+    flex: 1; /* Membuat area konten mengambil ruang yang tersedia */
+    background-color: rgba(255, 255, 255, 0.7); /* Opsional: Tambahkan overlay semi-transparan pada konten */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+footer {
+    backdrop-filter: blur(10px);
+    color: #060707;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+}
+
     </style>
 </head>
 <body>
@@ -79,6 +105,9 @@
     </div>
 
     <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
-
+   
 </body>
+<footer>
+    Copyright ©2024 <a href="#">Lancar Jaya Security</a>
+</footer>
 </html>

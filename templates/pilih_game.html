@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pilih Game</title>
+    <title>Games</title>
     <link rel="icon" href="{{ url_for('static', filename='imgs/icon_web.png') }}" type="image/png">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
     <style>
@@ -28,11 +28,24 @@
             width: 100%;
             height: auto;
         }
+        footer {
+            backdrop-filter: blur(10px);
+            color: #151718;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 14px;
+            box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+        }
+        footer a {
+            color: #30363d;
+            text-decoration: none;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Game-Station {{ session['username'] }}</a>
+        <a class="navbar-brand" href="#">Game Station {{ session['username'] }}</a>
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
@@ -52,8 +65,8 @@
                 <div class="game-card">
                     <img src="static/imgs/game1_image.png" alt="Game 1" class="game-image">
                     <div class="card-body text-center">
-                        <h5 class="card-title">Triangle Escape</h5>
-                        <p class="card-text">Bantu Triangle untuk pulang kerumah, keseruan dari sebuah game platformer dan hindari trap yang ada!.</p>
+                        <h5 class="card-title">Tic Tac Toe</h5>
+                        <p class="card-text">Game Mengasah Otak Ini ada fitur AI yang dimana kalian bermain melawan AI.</p>
                         <a href="/play_game1" class="btn btn-primary mb-3">Play Now</a>
                     </div>
                 </div>
@@ -63,8 +76,8 @@
                 <div class="game-card">
                     <img src="static/imgs/game2_image.png" alt="Game 2" class="game-image">
                     <div class="card-body text-center">
-                        <h5 class="card-title">Evil Glitch</h5>
-                        <p class="card-text">Cari glitch yang ada di map dan perbaiki untuk lanjutkan game hindari musuh dan traps!!.</p>
+                        <h5 class="card-title">Cek Keberuntungan</h5>
+                        <p class="card-text">Cek  hoki mu di game ini, note (bukan game judi ya ini!!)</p>
                         <a href="/play_game2" class="btn btn-primary mb-3">Play Now</a>
                     </div>
                 </div>
@@ -74,8 +87,8 @@
                 <div class="game-card">
                     <img src="static/imgs/game3_image.png" alt="Game 3" class="game-image">
                     <div class="card-body text-center">
-                        <h5 class="card-title">Escape Backroom</h5>
-                        <p class="card-text">Sebuah Game First person dengan mencari jalan keluar untuk selamatkan diri.</p>
+                        <h5 class="card-title">Box Tower</h5>
+                        <p class="card-text">Game Menyusun kotax setinggi tingi nya uhuy jangan sampai kebablasan yahj.</p>
                         <a href="/play_game3" class="btn btn-primary mb-3">Play Now</a>
                     </div>
                 </div>
@@ -85,8 +98,8 @@
                 <div class="game-card">
                     <img src="static/imgs/game4_image.png" alt="Game 3" class="game-image">
                     <div class="card-body text-center">
-                        <h5 class="card-title">The Wandering Wraith</h5>
-                        <p class="card-text">Pemain berperan sebagai "Wraith," roh pengembara yang harus memecahkan teka-teki, mengungkap misteri masa lalunya.</p>
+                        <h5 class="card-title">Ulo Glowing</h5>
+                        <p class="card-text">Ini adalah game ular jawa anda harus mendapatkan makan untuk si ulo glowing.</p>
                         <a href="/play_game4" class="btn btn-primary mb-3">Play Now</a>
                     </div>
                 </div>
@@ -95,5 +108,9 @@
     </div>
 
     <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    
 </body>
+<footer>
+    Copyright ©2024 <a href="#">Lancar Jaya Security</a>
+</footer>
 </html>
